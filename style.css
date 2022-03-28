@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Parisienne&family=Playfair+Display:wght@500&family=Redressed&family=Roboto:wght@300&display=swap");
+
+:root {
+  --color1: rgba(38, 133, 211, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* border: 2px solid red; */
+}
+
+body {
+  background: whitesmoke;
+  color: #212529;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+body p {
+  padding: 30px;
+  font-size: 1.3rem;
+}
+
+/* ******************* H E A D E R ******************** */
+
+header {
+  background: url(./img/Witchrafters.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 50px;
+}
+
+.titleContainer {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9rem;
+  font-family: sans-serif;
+  font-family: "Redressed", cursive;
+  color: white;
+  text-shadow: 0 0 20px var(--color1), 0 0 20px var(--color1);
+  user-select: none;
+  animation: titleAnim ease 3s;
+}
+
+@keyframes titleAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(20vh + -50%));
+  }
+  100% {
+    opacity: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 1386px) {
+  header {
+    height: 90vh;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 1246px) {
+  header {
+    height: 80vh;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 1122px) {
+  header {
+    height: 70vh;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 1010px) {
+  header {
+    height: 60vh;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 909px) {
+  header {
+    height: 50vh;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 818px) {
+  header {
+    height: 40vh;
+    margin-bottom: 0px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  header {
+    height: 30vh;
+    margin-bottom: 0px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 662px) {
+  header {
+    height: 304px;
+    margin-bottom: 0px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 595px) {
+  header {
+    height: 180px;
+    margin-bottom: 0px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  header {
+    height: 150px;
+    margin-bottom: 0px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ***************** N A V I G A T I O N ******************* */
+
+.topNav {
+  background-color: #333;
+  user-select: none;
+}
+
+.topNavInner {
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+}
+
+.topNavInner a,
+.topNavInner .btn {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  user-select: none;
+}
+
+.topNavInner a:hover {
+  background-color: white;
+  color: black;
+}
+
+.current {
+  background-color: var(--color1);
+  color: white;
+}
+
+.themeContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.theme {
+  float: left;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+#lightTheme {
+  background: whitesmoke;
+}
+#darkTheme {
+  background: #212529;
+}
+
+/* ********************** A C C U E I L **************** */
+
+/* **************** W H A T ************* */
+
+.rowContainer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+h2 {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 30px;
+}
+
+h2::after {
+  content: "";
+  width: 70%;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.24);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animLine ease 2.5s;
+}
+
+@keyframes animLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #imgCrest img {
+    height: 230px;
+    width: 220px;
+  }
+}
+
+/* ************ W H Y ************ */
+
+#imgSmug img {
+  border-radius: 50%;
+  size: 70%;
+  width: auto;
+}
+
+/* ***************** N A V I G A T I O N - C A R D S ******************* */
+
+.cardNav {
+  margin-top: 1px;
+  background-color: #333;
+}
+
+.topNavInner {
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+}
+
+.topNavInner a,
+.topNavInner .btn {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.topNavInner a:hover {
+  background-color: white;
+  color: black;
+}
+
+#current {
+  background-color: var(--color1);
+  color: white;
+}
+
+/* ********************** C A R D S **************** */
+
+.specCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.characteristicCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+  font-size: 1.2rem;
+  font-style: bold;
+  margin-top: 30px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: stretch;
+}
+
+.typeCard,
+.attributeCard,
+.rankCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.typeCard img,
+.attributeCard img,
+.rankCard img {
+  height: 25px;
+  width: 25px;
+}
+
+.effectCard {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+#Schmietta {
+  color: rgba(238, 10, 10, 0.89);
+  text-decoration: underline dotted;
+}
+
+#Schmietta:hover {
+  position: relative;
+}
+
+#Schmietta:hover::after {
+  background-image: url(./img/WitchcrafterSchmietta.png);
+  background-size: 358px 500px;
+  display: block;
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  content: "";
+  top: -500px;
+}
+
+#Genni {
+  color: rgba(9, 148, 9, 0.89);
+  text-decoration: underline dotted;
+}
+
+#Genni:hover {
+  position: relative;
+}
+
+#Genni:hover::after {
+  background-image: url(./img/WitchcrafterGenni.png);
+  background-size: 358px 500px;
+  display: block;
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  content: "";
+  top: -500px;
+}
+
+#Potterie {
+  color: rgba(134, 146, 30, 0.952);
+  text-decoration: underline dotted;
+}
+
+#Potterie:hover {
+  position: relative;
+}
+
+#Potterie:hover::after {
+  background-image: url(./img/WitchcrafterPotterie.png);
+  background-size: 358px 500px;
+  display: block;
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  content: "";
+  top: -500px;
+}
+
+#Pittore {
+  color: rgba(17, 143, 182, 0.952);
+  text-decoration: underline dotted;
+}
+
+#Pittore:hover {
+  position: relative;
+}
+
+#Pittore:hover::after {
+  background-image: url(./img/WitchcrafterPittore.png);
+  background-size: 358px 500px;
+  display: block;
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  content: "";
+  top: -500px;
+}
+
+#Reasoning {
+  color: #333;
+  text-decoration: underline dotted;
+}
+
+#Reasoning:hover {
+  position: relative;
+}
+
+#Reasoning:hover::after {
+  background-image: url(./img/Reasoning.png);
+  background-size: 358px 500px;
+  display: block;
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  content: "";
+  top: -500px;
+}
