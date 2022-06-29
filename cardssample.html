@@ -7,8 +7,7 @@
     <title>How To Play Witchcrafter</title>
 
     <link rel="stylesheet" href="./bootstrap.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <!-- <script src="./jQuery.js"></script> -->
+    <link id="cssTheme" rel="stylesheet" href="./style.css"/>
   </head>
 
   <!-- HEADER -->
@@ -26,7 +25,10 @@
 
     <div class="topNav">
       <div class="topNavInner">
-        <a href="./cardsindex.html#current" >Accueil</a>
+        <div class="themeContainer">
+          <div id="theme"></div>
+        </div>
+        <a href="./index.html#current" >Accueil</a>
         <a href="./cardssmallwitch.html#current">Cards</a>
         <a href="./cardssample.html#current" id="current">Sample Deck</a>
         <a href="#">Meta</a>
@@ -62,5 +64,6 @@
           
         </div>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
