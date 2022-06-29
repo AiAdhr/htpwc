@@ -172,7 +172,8 @@ h1 {
 
 /* ***************** N A V I G A T I O N ******************* */
 
-.topNav {
+.topNav,
+.cardNav {
   background-color: #333;
   user-select: none;
 }
@@ -278,7 +279,7 @@ h2::after {
 
 /* ***************** N A V I G A T I O N - C A R D S ******************* */
 
-.cardNav {
+.topNav {
   margin-top: 1px;
   background-color: #333;
 }
