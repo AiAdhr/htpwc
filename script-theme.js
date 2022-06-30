@@ -5,7 +5,6 @@ if (prefTheme == null) {
 } else {
     setTheme(prefTheme)
 }
-console.log("ok");
 
 document.getElementById("theme").onclick = () => {
     if (document.getElementById("cssTheme").getAttribute("href") == "./style.css") {
