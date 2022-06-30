@@ -12,7 +12,6 @@ document.getElementById("theme").onclick = () => {
     } else if (document.getElementById("cssTheme").getAttribute("href") == "./style-darktheme.css") {
         setTheme("light")
     }
-    console.log(localStorage.getItem("themeStorage"))
 }
 
 function setTheme(actualTheme) {
